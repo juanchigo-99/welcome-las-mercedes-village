@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Executive Guide - VIP Villa (Bilingual)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Paleta de Colores Modernos e Intensos (Azul Marino y Blanco) */
+        :root {
+            --color-background: #f7f9fc;    /* Blanco Roto Moderno */
+            --color-card-border: #ccd3dd;   /* Gris de Borde Sutil */
+            --color-primary-text: #333333;   /* Gris Carbón Oscuro */
+            --color-heading: #123456;       /* AZUL MARINO INTENSO */
+            --color-highlight: #123456;     
+            --color-accent: #3b618a;        /* Azul de Apoyo (Detalles) */
+            --color-wechat: #27ae60;
+        }
+
+        /* --- DEFINICIÓN DE ANIMACIONES --- */
+        @keyframes fadeInOut {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Estilos Base (Desktop/General) */
+        body {
+            font-family: 'Arial', sans-serif; 
+            margin: 0;
+            padding: 40px 20px;
+            color: var(--color-primary-text);
+            text-align: center;
+            background-color: var(--color-background); 
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 25px auto;
+            /* Padding Grande para Desktop */
+            padding: 70px; 
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+            border: 1px solid var(--color-card-border); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            /* ESTILO DEL MARCO GRUESO (Desktop) */
+            outline: 3px solid var(--color-heading); 
+            outline-offset: -20px; 
+        }
+        
+        /* Título Principal (Ahora en Chino) */
+        h1 {
+            font-family: Arial, sans-serif; 
+            color: var(--color-heading);
+            font-size: 2.5em; 
+            margin-bottom: 5px;
+            letter-spacing: 1px; 
+            font-weight: 600; 
+            text-align: center;
+            text-transform: none; 
+        }
+
+        h1 + p { /* Subtítulo Inglés (Desktop) */
+            font-family: 'Oswald', sans-serif; 
+            font-size: 1.5em; 
+            font-weight: 500;
+            color: var(--color-accent);
+            margin-top: 0px;
+            margin-bottom: 35px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .stars {
+            color: var(--color-accent);
+            font-size: 2.2em;
+            margin-bottom: 35px;
+            text-align: center;
+            line-height: 1;
+        }
+
+        /* Títulos de Sección (Desktop) */
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--color-heading); 
+            font-size: 1.6em;
+            border-bottom: 2px solid var(--color-card-border); 
+            padding-bottom: 10px;
+            margin-top: 45px;
+            margin-bottom: 25px;
+            position: relative;
+            text-align: center; 
+            width: 100%;
+            font-weight: 500;
+        }
+
+        h2::before, h2::after {
+            content: none;
+        }
+
+        /* Mensaje de Despedida - Centrado y Animado */
+        .closing-message {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5em;
+            font-weight: 500;
+            color: var(--color-heading);
+            margin-top: 40px;
+            margin-bottom: 5px; 
+            text-transform: uppercase;
+            border-top: 2px solid var(--color-card-border);
+            padding-top: 20px;
+            width: 100%;
+            display: block; /* Asegura el ancho completo para centrado */
+            text-align: center; /* Centrar el texto */
+            animation: fadeInOut 3s infinite ease-in-out; 
+        }
+        .closing-message + .chinese { /* Texto chino debajo del mensaje de cierre */
+            display: block; 
+            text-align: center; /* Centrar el texto */
+            animation: fadeInOut 3s infinite ease-in-out; 
+            animation-delay: 0.5s; 
+            width: 100%; /* Asegura el ancho completo */
+        }
+
+
+        /* Texto de Contenido y Listas */
+        p, li {
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: left;
+            margin: 12px 0;
+            color: var(--color-primary-text);
+            width: 100%;
+            font-weight: 400;
+        }
+
+        /* Texto Secundario (Inglés) */
+        .english {
+            font-size: 0.95em;
+            color: #757575;
+            font-weight: normal;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--color-highlight);
+            font-size: 1.15em;
+            padding: 2px 5px;
+            border-radius: 2px;
+            background-color: #f0f3f7; 
+        }
+        
+        /* Texto Primario (Chino) */
+        .chinese {
+            font-weight: 600; 
+            color: var(--color-primary-text);
+            font-size: 1.1em;
+        }
+        
+        .policy-title {
+            font-weight: bold;
+            color: var(--color-heading);
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .data-list, .contact-info, ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 15px;
+            width: 100%;
+        }
+
+        .data-list li, .contact-info li, ul li {
+            padding-left: 20px;
+            position: relative;
+            font-weight: 400; 
+        }
+
+        .data-list li::before, .contact-info li::before, ul li::before {
+            content: '•'; 
+            color: var(--color-accent);
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .wechat-id {
+            color: var(--color-wechat);
+            font-weight: bold;
+        }
+        
+        /* ================================================= */
+        /* --- OPTIMIZACIÓN PARA TELÉFONOS (MOBILE) --- */
+        /* ================================================= */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px; 
+            }
+
+            .container {
+                padding: 30px; 
+                margin: 15px auto;
+                outline: 2px solid var(--color-heading); 
+                outline-offset: -10px; 
+                border-radius: 8px; 
+            }
+
+            /* Reducción de Tamaños de Fuente */
+            h1 {
+                font-size: 2.0em; 
+            }
+
+            h1 + p {
+                font-size: 1.2em; 
+                margin-bottom: 25px;
+            }
+
+            h2 {
+                font-size: 1.4em; 
+                margin-top: 30px;
+            }
+
+            p, li {
+                font-size: 1.0em; 
+                line-height: 1.6;
+            }
+
+            .chinese {
+                font-size: 1.0em;
+            }
+
+            .english {
+                font-size: 0.85em;
+            }
+            
+            .closing-message {
+                font-size: 1.2em; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>欢迎来到拉斯梅赛德斯别墅</h1>
+    <p>WELCOME TO LAS MERCEDES VILLAGE</p>
+    
+    <p class="stars">❖ ❖ ❖</p>
+
+    <h2>用餐时间表 - <span class="english">MEAL SCHEDULE</span></h2>
+    <ul class="data-list">
+        <li>🍽️ <span class="chinese">早餐:</span> <span class="highlight">上午 7:00 至 上午 8:30</span>
+            <br><span class="english">Breakfast: 07:00 A.M. to 08:30 A.M.</span></li>
+        <li>🍽️ <span class="chinese">午餐:</span> <span class="highlight">下午 12:00 至 下午 1:00</span>
+            <br><span class="english">Lunch: 12:00 P.M. to 01:00 P.M.</span></li>
+        <li>🍽️ <span class="chinese">晚餐:</span> <span class="highlight">下午 6:00 至 下午 7:30</span>
+            <br><span class="english">Dinner: 06:00 P.M. to 07:30 P.M.</span></li>
+    </ul>
+
+    <h2>无线网络连接 - <span class="english">WIFI CONNECTION</span></h2>
+    <p style="text-align: center; margin-left: 0;">📶 <span class="chinese">无线网络:</span> <span class="highlight">Las_Mercedes</span></p>
+    <p style="text-align: center; margin-left: 0;">🔑 <span class="chinese">密码:</span> <span class="highlight">Mercedes.2024</span></p>
+
+    <h2>设施与服务 - <span class="english">AMENITIES & SERVICES</span></h2>
+    <ul class="data-list">
+        <li><span class="policy-title">🚬 吸烟规定 (Smoking Policy):</span> <span class="chinese">雪茄休闲室和露台允许吸烟。请勿在客房内吸烟，感谢您的配合。</span>
+            <br><span class="english">Smoking is allowed in the <span style="font-weight: bold;">Cigar Lounge</span> and the <span style="font-weight: bold;">Patio</span>. We kindly request that guests refrain from smoking inside the rooms.</span></li>
+        <li><span class="policy-title">🏋️ 休闲 (Recreation):</span> <span class="chinese">您可随时使用健身房和游泳池。</span>
+            <br><span class="english">Feel free to use the Gym and the Pool Area.</span></li>
+        <li><span class="policy-title">☕ 饮品与小吃 (Beverages & Snacks):</span> <span class="chinese">咖啡、茶、软饮和椰子水可在用餐区附近的服务区获取，小吃 (开心果、腰果) 亦可。</span>
+            <br><span class="english">Coffee, tea, refreshments, and coconut water are available in the Service Area (near the Dining Room), along with snacks like pistachios and cashews.</span></li>
+        <li><span class="policy-title">🚗 接送服务 (Transfer Service):</span> <span class="chinese">如需任何接送服务，请联系经理。</span>
+            <br><span class="english">If you require any transfer service, please contact the manager.</span></li>
+    </ul>
+
+    <h2>重要联系方式 - <span class="english">IMPORTANT CONTACTS</span></h2>
+    <ul class="contact-info">
+        <li>📞 <span class="chinese">服务经理:</span> <span class="highlight">+58 414 919 9038</span>
+            <br><span class="english">Service Manager</span></li>
+        <li>💬 <span class="chinese">微信 ID:</span> <span class="wechat-id">Juan_Service_Manager</span>
+            <br><span class="english">WeChat ID</span></li>
+    </ul>
+
+    <h2>现场工作人员 - <span class="english">STAFF ON PREMISES</span></h2>
+    <ul class="data-list">
+        <li>👮 <span class="chinese">安保团队位于警卫室。</span>
+            <br><span class="english">Security Team is located at the Guardhouse.</span></li>
+        <li>👨‍🍳 <span class="chinese">有一支专业的服务团队和两名厨师为您服务。</span>
+            <br><span class="english">A dedicated Service Team and two Chefs are available for your needs.</span></li>
+    </ul>
+
+    <p class="closing-message">We hope you have a pleasant stay.</p>
+    <span class="chinese" style="margin-top: -10px; font-size: 1.1em; font-weight: 500; color: var(--color-accent);">我们希望您有一个愉快的住宿体验。</span>
+</div>
+
+</body>
+</html>
