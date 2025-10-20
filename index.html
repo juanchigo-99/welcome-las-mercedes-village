@@ -6,14 +6,15 @@
     <title>Modern Executive Guide - VIP Villa (Bilingual)</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Paleta de Colores Modernos e Intensos (Azul Marino y Blanco) */
+        /* --- PALETA DE COLORES (MARRÓN Y BEIGE) --- */
         :root {
-            --color-background: #f7f9fc;    /* Blanco Roto Moderno */
-            --color-card-border: #ccd3dd;   /* Gris de Borde Sutil */
+            --color-background: #EED0B4;    /* Beige Claro/Durazno (Fondo del Poster) */
+            --color-card-background: #F7F5F0; /* Blanco Crema/Hueso */
+            --color-card-border: #DCDCDC;   /* Gris de Borde Sutil */
             --color-primary-text: #333333;   /* Gris Carbón Oscuro */
-            --color-heading: #123456;       /* AZUL MARINO INTENSO */
-            --color-highlight: #123456;     
-            --color-accent: #3b618a;        /* Azul de Apoyo (Detalles) */
+            --color-heading: #5C4033;       /* MARRÓN OSCURO PROFUNDO (Títulos y Borde) */
+            --color-highlight: #5C4033;     
+            --color-accent: #B8860B;        /* MARRÓN CARAMELO/BRONCE (Acentos) */
             --color-wechat: #27ae60;
         }
 
@@ -37,9 +38,8 @@
         .container {
             max-width: 700px;
             margin: 25px auto;
-            /* Padding Grande para Desktop */
             padding: 70px; 
-            background-color: #ffffff;
+            background-color: var(--color-card-background); 
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
             border: 1px solid var(--color-card-border); 
@@ -47,12 +47,12 @@
             flex-direction: column;
             align-items: center;
 
-            /* ESTILO DEL MARCO GRUESO (Desktop) */
+            /* ESTILO DEL MARCO GRUESO */
             outline: 3px solid var(--color-heading); 
             outline-offset: -20px; 
         }
         
-        /* Título Principal (Ahora en Chino) */
+        /* Título Principal */
         h1 {
             font-family: Arial, sans-serif; 
             color: var(--color-heading);
@@ -64,11 +64,10 @@
             text-transform: none; 
         }
 
-        h1 + p { /* Subtítulo Inglés (Desktop) */
+        h1 + p { /* Subtítulo Inglés */
             font-family: 'Oswald', sans-serif; 
             font-size: 1.5em; 
-            font-weight: 500;
-            color: var(--color-accent);
+            color: var(--color-accent); 
             margin-top: 0px;
             margin-bottom: 35px;
             text-align: center;
@@ -76,14 +75,14 @@
         }
 
         .stars {
-            color: var(--color-accent);
+            color: var(--color-accent); 
             font-size: 2.2em;
             margin-bottom: 35px;
             text-align: center;
             line-height: 1;
         }
 
-        /* Títulos de Sección (Desktop) */
+        /* Títulos de Sección */
         h2 {
             font-family: 'Oswald', sans-serif;
             color: var(--color-heading); 
@@ -114,16 +113,17 @@
             border-top: 2px solid var(--color-card-border);
             padding-top: 20px;
             width: 100%;
-            display: block; /* Asegura el ancho completo para centrado */
-            text-align: center; /* Centrar el texto */
+            display: block; 
+            text-align: center; 
             animation: fadeInOut 3s infinite ease-in-out; 
         }
-        .closing-message + .chinese { /* Texto chino debajo del mensaje de cierre */
+        .closing-message + .chinese { 
             display: block; 
-            text-align: center; /* Centrar el texto */
+            text-align: center; 
             animation: fadeInOut 3s infinite ease-in-out; 
             animation-delay: 0.5s; 
-            width: 100%; /* Asegura el ancho completo */
+            width: 100%; 
+            color: var(--color-accent) !important; 
         }
 
 
@@ -137,6 +137,12 @@
             width: 100%;
             font-weight: 400;
         }
+        
+        /* Aumento del margen inferior para crear espacio entre líneas de servicio */
+        .data-list li {
+            margin-bottom: 18px; /* Espacio extra */
+        }
+
 
         /* Texto Secundario (Inglés) */
         .english {
@@ -168,22 +174,9 @@
             margin-right: 5px;
         }
 
-        .data-list, .contact-info, ul {
-            list-style: none;
-            padding: 0;
-            margin-left: 15px;
-            width: 100%;
-        }
-
-        .data-list li, .contact-info li, ul li {
-            padding-left: 20px;
-            position: relative;
-            font-weight: 400; 
-        }
-
         .data-list li::before, .contact-info li::before, ul li::before {
             content: '•'; 
-            color: var(--color-accent);
+            color: var(--color-accent); 
             font-size: 1.5em;
             position: absolute;
             left: 0;
@@ -191,20 +184,12 @@
             transform: translateY(-50%);
         }
         
-        .wechat-id {
-            color: var(--color-wechat);
-            font-weight: bold;
-        }
-        
         /* ================================================= */
         /* --- OPTIMIZACIÓN PARA TELÉFONOS (MOBILE) --- */
         /* ================================================= */
 
         @media (max-width: 600px) {
-            body {
-                padding: 20px 10px; 
-            }
-
+            body { padding: 20px 10px; }
             .container {
                 padding: 30px; 
                 margin: 15px auto;
@@ -212,38 +197,13 @@
                 outline-offset: -10px; 
                 border-radius: 8px; 
             }
-
-            /* Reducción de Tamaños de Fuente */
-            h1 {
-                font-size: 2.0em; 
-            }
-
-            h1 + p {
-                font-size: 1.2em; 
-                margin-bottom: 25px;
-            }
-
-            h2 {
-                font-size: 1.4em; 
-                margin-top: 30px;
-            }
-
-            p, li {
-                font-size: 1.0em; 
-                line-height: 1.6;
-            }
-
-            .chinese {
-                font-size: 1.0em;
-            }
-
-            .english {
-                font-size: 0.85em;
-            }
-            
-            .closing-message {
-                font-size: 1.2em; 
-            }
+            h1 { font-size: 2.0em; }
+            h1 + p { font-size: 1.2em; margin-bottom: 25px; }
+            h2 { font-size: 1.4em; margin-top: 30px; }
+            p, li { font-size: 1.0em; line-height: 1.6; }
+            .chinese { font-size: 1.0em; }
+            .english { font-size: 0.85em; }
+            .closing-message { font-size: 1.2em; }
         }
     </style>
 </head>
@@ -267,7 +227,7 @@
 
     <h2>无线网络连接 - <span class="english">WIFI CONNECTION</span></h2>
     <p style="text-align: center; margin-left: 0;">📶 <span class="chinese">无线网络:</span> <span class="highlight">Las_Mercedes</span></p>
-    <p style="text-align: center; margin-left: 0;">🔑 <span class="chinese">密码:</span> <span class="highlight">Mercedes.2024</span></p>
+    <p style="text-align: center; margin-left: 0;">🔑 <span class="chinese">密码:</span> <span class="highlight">Mercedes.2024*</span></p>
 
     <h2>设施与服务 - <span class="english">AMENITIES & SERVICES</span></h2>
     <ul class="data-list">
