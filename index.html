@@ -34,9 +34,9 @@
         }
 
         .container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 25px auto;
-            padding: 60px 40px;
+            padding: 70px;
             background-color: var(--color-card-background);
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -51,8 +51,9 @@
         h1 {
             font-family: Arial, sans-serif;
             color: var(--color-heading);
-            font-size: 2.3em;
+            font-size: 2.5em;
             margin-bottom: 5px;
+            letter-spacing: 1px;
             font-weight: 600;
             text-align: center;
             width: 100%;
@@ -60,10 +61,10 @@
 
         h1 + p {
             font-family: 'Oswald', sans-serif;
-            font-size: 1.4em;
+            font-size: 1.5em;
             color: var(--color-accent);
             margin-top: 0px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-transform: uppercase;
             text-align: center;
             width: 100%;
@@ -73,7 +74,7 @@
             background-color: #fff4e6;
             border-left: 4px solid var(--color-accent);
             padding: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-align: left;
             width: 100%;
             box-sizing: border-box;
@@ -82,7 +83,7 @@
         .stars {
             color: var(--color-accent);
             font-size: 2.2em;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             line-height: 1;
             text-align: center;
         }
@@ -90,74 +91,82 @@
         h2 {
             font-family: 'Oswald', sans-serif;
             color: var(--color-heading);
-            font-size: 1.5em;
+            font-size: 1.6em;
             border-bottom: 2px solid var(--color-card-border);
-            padding-bottom: 8px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            padding-bottom: 10px;
+            margin-top: 45px;
+            margin-bottom: 25px;
             width: 100%;
+            font-weight: 500;
             text-align: center;
         }
 
         p, li {
-            font-size: 1.05em;
-            line-height: 1.7;
+            font-size: 1.1em;
+            line-height: 1.8;
             text-align: left;
-            margin: 10px 0;
+            margin: 12px 0;
+            color: var(--color-primary-text);
+            width: 100%;
         }
 
-        .chinese { font-weight: 600; font-size: 1.1em; }
-        .english { font-size: 0.9em; color: #757575; font-weight: normal; }
-
+        .data-list li { margin-bottom: 18px; }
+        .english { font-size: 0.95em; color: #757575; font-weight: normal; }
         .highlight {
             font-weight: bold;
             color: var(--color-highlight);
-            background-color: #f0f3f7;
+            font-size: 1.15em;
             padding: 2px 5px;
-            border-radius: 4px;
+            border-radius: 2px;
+            background-color: #f0f3f7;
         }
+
+        .chinese { font-weight: 600; font-size: 1.1em; }
+        .policy-title { font-weight: bold; color: var(--color-heading); margin-right: 5px; }
 
         .data-list, .contact-info, ul {
             list-style: none;
             padding: 0;
+            margin-left: 15px;
             width: 100%;
         }
 
-        .data-list li, .contact-info li {
+        .data-list li, .contact-info li, ul li {
             padding-left: 25px;
             position: relative;
-            margin-bottom: 15px;
         }
 
-        .data-list li::before, .contact-info li::before {
+        .data-list li::before, .contact-info li::before, ul li::before {
             content: '•';
             color: var(--color-accent);
             font-size: 1.5em;
             position: absolute;
             left: 0;
-            top: 0;
+            top: 10px;
         }
+
+        .wechat-id { color: var(--color-wechat); font-weight: bold; }
 
         .closing-message {
             font-family: 'Oswald', sans-serif;
-            font-size: 1.4em;
+            font-size: 1.5em;
+            font-weight: 500;
             color: var(--color-heading);
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid var(--color-card-border);
-            width: 100%;
-            text-align: center;
-            display: block;
+            margin-bottom: 5px;
             text-transform: uppercase;
+            border-top: 2px solid var(--color-card-border);
+            padding-top: 20px;
+            width: 100%;
+            display: block;
+            text-align: center;
         }
 
         @media (max-width: 600px) {
-            body { padding: 10px; }
-            .container { padding: 35px 25px; outline-offset: -12px; }
-            h1 { font-size: 1.8em; }
-            h1 + p { font-size: 1.1em; }
-            h2 { font-size: 1.3em; }
-            p, li { font-size: 0.95em; }
+            body { padding: 20px 10px; }
+            .container { padding: 40px 25px; outline-offset: -12px; }
+            h1 { font-size: 1.9em; }
+            h2 { font-size: 1.4em; }
         }
     </style>
 </head>
@@ -185,29 +194,61 @@
     </ul>
 
     <h2>无线网络连接 - <span class="english">WIFI CONNECTION</span></h2>
-    <p style="text-align: center; width: 100%;">📶 <span class="chinese">无线网络 / Network：</span> <span class="highlight">Las_Mercedes</span></p>
-    <p style="text-align: center; width: 100%;">🔑 <span class="chinese">密码 / Password：</span> <span class="highlight">Mercedes.2026*WF</span></p>
+    <div style="margin-bottom: 20px;">
+        <p style="text-align: center; margin-bottom: 5px;">📶 <span class="chinese">无线网络 / Network:</span> <span class="highlight">Las_Mercedes</span></p>
+        <p style="text-align: center;">🔑 <span class="chinese">密码 / Password:</span> <span class="highlight">Mercedes.2026*WF</span></p>
+    </div>
+    <div style="border-top: 1px dashed var(--color-card-border); padding-top: 15px; width: 60%;">
+        <p style="text-align: center; margin-bottom: 5px;">📶 <span class="chinese">无线网络 / Network:</span> <span class="highlight">Qta.Cigarral</span></p>
+        <p style="text-align: center;">🔑 <span class="chinese">密码 / Password:</span> <span class="highlight">Cigarral.2026*WF</span></p>
+    </div>
 
     <h2>设施与 服务 - <span class="english">AMENITIES & SERVICES</span></h2>
     <ul class="data-list">
-        <li><b>🚬 <span class="chinese">吸烟规定 (Smoking Policy):</span></b> <span class="chinese">只允许在 <b>雪茄沙龙</b> 吸烟。严禁在客房和室内区域吸烟。</span>
-            <br><span class="english">Smoking strictly limited to the Cigar Lounge. No smoking in rooms.</span></li>
-        <li><b>🍽️ <span class="chinese">餐饮服务 (Food Service):</span></b> <span class="chinese">餐食仅由厨房和服务人员上桌和呈现。</span>
-            <br><span class="english">Food is served and presented at the table exclusively by the staff.</span></li>
-        <li><b>🧺 <span class="chinese">洗衣服务 (Laundry Service):</span></b> <span class="chinese">每日上午 9:00 至 下午 7:00。此服务不包含贴身衣物。</span>
-            <br><span class="english">Laundry service: 09:00 A.M. to 07:00 P.M. (Excludes underwear).</span></li>
-        <li><b>🏋️ <span class="chinese">休闲 (Recreation):</span></b> <span class="chinese">您可随时使用健身房和游泳池。</span>
+        <li><span class="policy-title">🚬 吸烟规定 (Smoking Policy):</span> <span class="chinese">只允许在 <span style="font-weight: bold;">雪茄沙龙</span> 吸烟。严禁在客房和室内区域吸烟。</span>
+            <br><span class="english">Smoking is strictly limited to the Cigar Lounge. Refrain from smoking inside the rooms and indoor areas.</span></li>
+        <li><span class="policy-title">🍽️ 餐饮服务 (Food Service):</span> <span class="chinese">餐食仅由厨房和服务人员上桌和呈现。</span>
+            <br><span class="english">Food is served and presented at the table exclusively by the service and kitchen staff.</span></li>
+        <li><span class="policy-title">☕ 饮品与小吃 (Beverages & Snacks):</span> <span class="chinese">咖啡、茶、软饮和椰子水以及小吃 (开心果、腰果) 可在服务区获取。</span>
+            <br><span class="english">Coffee, tea, refreshments, coconut water, and snacks (pistachios, cashews) are available in the Service Area.</span></li>
+        <li><span class="policy-title">🚪 外部访客 (External Visits):</span> <span class="chinese">任何外部访客来访必须提前通知行政团队和安保团队进行登记。</span>
+            <br><span class="english">Any external visit must be previously notified to the Administration and Security Teams for registration.</span></li>
+        <li><span class="policy-title">🧺 洗衣服务 (Laundry Service):</span> <span class="chinese">每日上午 9:00 至 下午 7:00。此服务不包含贴身衣物。</span>
+            <br><span class="english">Laundry service available daily from 09:00 A.M. to 07:00 P.M. (Excludes underwear).</span></li>
+        <li><span class="policy-title">🏋️ 休闲 (Recreation):</span> <span class="chinese">您可随时使用健身房和游泳池。</span>
             <br><span class="english">Feel free to use the Gym and the Pool Area.</span></li>
+    </ul>
+
+    <h2>安全与 预防 - <span class="english">SAFETY & PREVENTION</span></h2>
+    <ul class="data-list">
+        <li><span class="policy-title">🚨 紧急路线 (Emergency Route):</span> <span class="chinese">请熟悉最近的疏散路线（主入口）并时刻保持走廊和所有紧急出口畅通无阻。</span>
+            <br><span class="english">Please familiarize yourself with the nearest evacuation route (main entrance). Keep hallways and all emergency exits clear at all times.</span></li>
+        <li><span class="policy-title">🤫 宁静与和谐 (Silence & Harmony):</span> <span class="chinese">敬请各位住客保持宁静、内敛的氛围,以确保所有住客的和谐与休息。</span>
+            <br><span class="english">We kindly request maintaining an atmosphere of silence and recollection to ensure harmony and rest for all guests.</span></li>
+        <li><span class="policy-title">🔒 闭门 (Closed Doors):</span> <span class="chinese">为安全起见,离开房间或公共区域时,请关闭所有房门。</span>
+            <br><span class="english">For safety, please keep all doors closed when leaving a room or lounge.</span></li>
+    </ul>
+
+    <h2>整洁与 环境 - <span class="english">ORDER & ENVIRONMENT</span></h2>
+    <ul class="data-list">
+        <li><span class="policy-title">🚯 废物控制 (Waste Control):</span> <span class="chinese">请使用废纸篓和衣物篮,并避免在客房或公共区域丢弃有机垃圾或塑料垃圾。</span>
+            <br><span class="english">Please use waste bins and laundry baskets. Kindly avoid throwing organic waste or plastic in the rooms or common areas.</span></li>
+        <li><span class="policy-title">🧹 公共区域 (Common Area Order):</span> <span class="chinese">住客有责任在晚上9:00后收拾个人物品,并将公共区域恢复原状。</span>
+            <br><span class="english">Guests are responsible for picking up their belongings and leaving common areas in their original state after 09:00 P.M.</span></li>
+        <li><span class="policy-title">🌡️ 节能 (Energy Saving):</span> <span class="chinese">标准空调温度为 25°C。请在离开房间或夜间使用完公共区域后关闭灯光和空调。</span>
+            <br><span class="english">The standard A/C temperature is 25°C. Please turn off lights and A/C when leaving the room or common areas at night.</span></li>
+        <li><span class="policy-title">💧 用水 (Water Usage):</span> <span class="chinese">请节约用水,如有任何漏水情况请立即通知行政团队进行修缮。</span>
+            <br><span class="english">Please apply conscious use of potable water and immediately report any leaks to the Administration Team.</span></li>
     </ul>
 
     <h2>重要联系方式 - <span class="english">IMPORTANT CONTACTS</span></h2>
     <ul class="contact-info">
         <li>📞 <span class="chinese">行政服务与后勤助理 (Assistant - Juan):</span> <span class="highlight">+58 414 919 9038</span>
             <br><span class="english">Assistant of Attention and Logistics for the Administration Team</span></li>
-        <li>💬 <span class="chinese">微信 ID:</span> <span style="color:var(--color-wechat); font-weight:bold;">Juan_Service_Manager</span></li>
+        <li>💬 <span class="chinese">微信 ID:</span> <span class="wechat-id">Juan_Service_Manager</span></li>
         <li>📞 <span class="chinese">行政经理 (Administration Manager - Olvido):</span> <span class="highlight">+58 414 912 1044</span>
             <br><span class="english">Administration Manager</span></li>
-        <li>💬 <span class="chinese">微信 ID:</span> <span style="color:var(--color-wechat); font-weight:bold;">OlvidoBarreto</span></li>
+        <li>💬 <span class="chinese">微信 ID:</span> <span class="wechat-id">OlvidoBarreto</span></li>
     </ul>
 
     <h2>现场工作人员 - <span class="english">STAFF ON PREMISES</span></h2>
